@@ -202,73 +202,100 @@ border-radius: 2px;
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
     }
 }
-        /* Mobile Responsive */
-@media (max-width: 768px) {
+       /* ===== MOBILE FIX ===== */
+@media screen and (max-width: 768px) {
 
-    header {
-        flex-direction: column;
-        padding: 15px;
-        text-align: center;
+    /* Header */
+    header{
+        padding: 10px 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .logo img {
-        width: 90px;
+    /* Logo */
+    .logo img{
+        width: 75px;
         height: auto;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 12px;
+    /* Navigation */
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
         padding: 0;
     }
 
-    nav ul li {
+    nav ul li{
         margin: 0;
     }
 
-    .hero {
-        padding: 50px 20px;
+    nav ul li a{
+        font-size: 14px;
     }
 
-    .hero h1 {
+    /* Button */
+    .cta-btn{
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    /* Hero */
+    .hero{
+        padding: 40px 20px;
+    }
+
+    .hero h1{
         font-size: 2rem;
+        line-height: 1.2;
     }
 
-    .story-wrapper {
+    /* Story Section */
+    .story-wrapper{
+        display: flex;
         flex-direction: column;
+        gap: 20px;
+        padding: 20px;
     }
 
-    .story-image img {
+    .story-image img{
         width: 100%;
-        height: auto;
+        border-radius: 10px;
     }
 
-    .story-text {
+    .story-text{
+        width: 100%;
+        text-align: left;
+    }
+
+    .story-text p{
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* Values Cards */
+    .values-grid{
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .value-card{
+        padding: 20px;
+    }
+
+    /* CTA Button */
+    .cta-button{
+        width: 90%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer{
         padding: 20px;
         text-align: center;
-    }
-
-    .story-text p {
-        font-size: 15px;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .value-card {
-        padding: 20px;
-    }
-
-    .cta-button {
-        width: 100%;
-        padding: 15px;
-        font-size: 15px;
-    }
-
-    footer {
-        padding: 20px;
-        font-size: 14px;
     }
 }
       
