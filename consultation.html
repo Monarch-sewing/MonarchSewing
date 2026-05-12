@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Sewing Consultation</title>
+    <style>
+        :root {
+            --primary-color: #6d4c41; /* Sewing/Thread Brown */
+            --accent-color: #de5d83;  /* Soft Pink Accent */
+            --bg-color: #f9f7f6;
+        }
+
+        body {
+background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('thankyou.jpg');
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .consultation-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+
+        input:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4b3621;
+        }
+    </style>
+</head>
+<body>
+
+<div class="consultation-card">
+    <h2>Book a Consultation</h2>
+    <p>Let’s bring your vision to life. Fill in your details below.</p>
+
+<form onsubmit="sendToWhatsApp(event)">
+        <!-- Contact Info -->
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+        </div>
+
+        <!-- Service Type -->
+        <div class="form-group">
+            <label for="service">Service Type</label>
+            <select id="service" name="service">
+                <option value="custom-design">Custom Design</option>
+                <option value="tailoring-alterations">Tailoring and Alterations</option>
+                <option value="Restyle">Restyle</option>
+                <option value="mending">Mending services</option>
+            </select>
+        </div>
+
+        <!-- Date & Time -->
+        <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <!-- Notes -->
+        <div class="form-group">
+            <label for="notes">Project Details</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Describe your fabric, style, or specific needs..."></textarea>
+        </div>
+
+        <button type="submit">Schedule My Visit</button>
+    </form>
+</div>
+<script>
+function sendToWhatsApp(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let service = document.getElementById("service").value;
+    let date = document.getElementById("date").value;
+    let notes = document.getElementById("notes").value;
+
+    let phoneNumber = "916309241716"; 
+
+    let message =
+Hello Monarch Sewing,
+
+I would like to book a consultation.
+
+Name: ${name}
+Email: ${email}
+Service: ${service}
+Preferred Date: ${date}
+
+Project Details:
+${notes}`;
+
+    let whatsappURL =
+`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+}
+</script>
+
+</body>
+</html>

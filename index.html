@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="script.js"></script>
+   <link rel="stylesheet" href="https://cloudflare.com">
+<link rel="stylesheet" href="style.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Monarch sewing</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base Styles */
+        :root {
+            --pink: #fbc2eb;
+            --blue: #a6c1ee;
+            --accent: #ff6b9d;
+            --text-dark: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+     body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+
+    /* Pink, Blush, and White Gradient */
+    background: linear-gradient(
+        135deg, 
+        #FFC0CB 20%,    /* Pink */
+        #FFE4E1 100%,   /* Blush */
+        #FFFFFF 20%   /* White */
+    );
+    
+    background-attachment: fixed;
+    margin: 0; /* Ensures no white gaps around the edges */
+}
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .bussiness-name {
+   /* Importing a Cottagecore-style font from Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+    font-family: "Georgia", cursive;
+    font-size: 2.2rem; /* Script fonts usually need to be slightly larger to be legible */
+    font-weight: 700;
+font-style:italic;
+    color: #DB7093;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.15); /* Slightly deeper shadow for thin script lines */
+    letter-spacing: 1px;
+
+}
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        .cta-btn {
+            background: var(--accent);
+            color: white !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+position: relative; z-index: 10;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 10%;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 40px 10% 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+.why-choose-us {
+    padding: 60px 20px;
+    background-color: #f9f7f5; /* Light, soft background */
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.why-choose-us h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.usp-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.usp-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 20px;
+}
+
+.usp-item h3 {
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+.usp-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}    /* How it work section */
+	    
+/* Container with Background Image */
+.how-it-works {
+  position: relative;
+  background-image: url('work2.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: creates a parallax effect */
+  min-height: 500px;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Dark overlay to ensure text readability */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity (0.5) to darken image */
+  padding: 80px 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.section-title {
+  text-align: center;
+ color:#FFFFFF;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+/* Flexbox arrangement for cards */
+.steps-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Transparent Glass Step Cards */
+.step-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  
+  /* Transparency & Blur */
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  
+  /* Border & Shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.step-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #3b82f6; /* Primary color */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.step-card h3 {
+  margin-bottom: 15px;
+}
+
+.step-card p {
+  line-height: 1.6;
+  opacity: 0.9;
+}        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 1rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; }
+            nav ul li { margin: 0.5rem 1rem; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+<div class="header-container">
+<div class="logo">
+        <img src="monarch-logo.png" alt="logo image" width="150" height="200"></div>
+</div>
+<nav>
+    <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+
+                <li class="nav-icons">
+           <a href="javascript:void(0)" onclick="sendToServices()">
+             <i class="fas fa-search"></i></a></li>
+
+                <li><a href="consultation.html" class="cta-btn">Book a Consultation</a></li>
+             
+            </ul>
+        </nav>
+ </header>
+
+    <section class="hero">
+        <h1>Precision in Every Stitch</h1>
+        <p>Bespoke tailoring and alterations designed for your unique lifestyle.</p>  &nbsp;&nbsp;
+
+
+  
+ <h3 class="section-title">Our Passion</h3>
+  <div class="description-image">
+        <img src="image.jpg" alt="Tailored garment design showcase background" class="description-image"> &nbsp;&nbsp;
+    </div>
+   
+        <p>"Passionate about precision, I view sewing as a transformative art form. I specialize in turning high-quality fabrics into bespoke garments that offer the perfect fit and lasting quality. My focus is on meticulous finishing—from clean seams to detailed embellishments—because I believe in delivering a masterpiece, not just a garment. My mission is to blend your vision with my artistry, resulting in custom pieces that are both elegant and perfectly tailored to your body."
+        </p>
+    </div>&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+<section class="why-choose-us">
+    <div class="container">
+        <h2>Why Choose Us</h2>
+        <p class="section-intro">Highlighting the artistry and values behind every stitch.</p>
+        
+        <div class="usp-grid">
+            <div class="usp-item">
+                <div class="icon">🪡</div>
+                <h3>Expert Craftsmanship</h3>
+                <p>With over <strong>[Number]</strong> years of experience in textile arts and garment construction, we bring a level of mastery to every project that ensures longevity and style.</p>
+            </div>
+
+            <div class="usp-item">
+                <div class="icon">🔍</div>
+                <h3>Attention to Detail</h3>
+                <p>Quality is found in the hidden details. We believe the inside of a garment should look as beautiful and refined as the outside.</p>
+            </div>
+
+            <div class="usp-item">
+                <div class="icon">🌿</div>
+                <h3>Sustainable Choice</h3>
+                <p>Repairing and custom-making clothes reduces waste and promotes a slow-fashion lifestyle, helping you build a wardrobe that lasts a lifetime.</p>
+            </div>
+        </div>
+    </div>
+</section>
+</br></br></br>
+  
+
+
+
+<section class="how-it-works">
+<div class="overlay">
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps-wrapper">
+
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Consultation</h3>
+            <p>Every project starts with a conversation. We discuss your vision, take precise measurements, and provide a clear estimate for your custom design or repair.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Expert Crafting</h3>
+            <p>Using professional techniques and high-quality materials, your project is meticulously sewn in our studio with a focus on fine details and structural longevity.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Final Fitting</h3>
+            <p>We ensure the perfect fit and finish. Once your item is pressed and prepped to our high standards, it’s ready for you to enjoy and wear with confidence.</p>
+</div>
+</section></br>
+
+
+
+<!-- Shipping & Delivery Section -->
+<section id="shipping-policy" style="font-family: 'Segoe UI', sans-serif; background: #fff; padding: 80px 20px; max-width: 1100px; margin: auto;">
+    
+    <div style="text-align: center; margin-bottom: 60px;">
+        <h2 style="font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">The Journey Home</h2>
+        <div style="width: 50px; height: 3px; background: #e0d5c1; margin: auto;"></div>
+        <p style="color: #888; margin-top: 15px;">How your handcrafted piece reaches your wardrobe.</p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: stretch;">
+        
+        <!-- Left Column: Visual Impact -->
+        <div style="flex: 1; min-width: 320px; position: relative;">
+            <div style="position: sticky; top: 20px;">
+                <img src="delivery.jpg" alt="Packaging" style="width: 100%; height: 500px; object-fit: cover; border-radius: 40px 0 40px 0; filter: sepia(20%); shadow: 20px 20px 0px #f5e1e1;">
+                <!-- Unique Overlap Box -->
+                <div style="position: absolute; bottom: -20px; right: -20px; background: #333; color: #fff; padding: 25px; border-radius: 12px; max-width: 200px; font-size: 0.85rem; line-height: 1.4;">
+                    <span style="color: #e0d5c1; font-weight: bold; font-size: 1.2rem;">Volumetric Pricing</span><br>
+                    Charges are based on the greater of actual or volumetric weight.
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Interactive Timeline -->
+        <div style="flex: 1.2; min-width: 320px;">
+            <div style="border-left: 2px dashed #e0d5c1; padding-left: 35px; position: relative;">
+                
+                <!-- Step 1 -->
+                <div style="margin-bottom: 40px; position: relative;">
+                    <div style="position: absolute; left: -44px; top: 0; background: #fff; border: 2px solid #333; width: 16px; height: 16px; border-radius: 50%;"></div>
+                    <h3 style="margin: 0; color: #8b5e3c; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 1px;">Step 1: Crafting & Dispatch</h3>
+                    <p style="margin: 10px 0; color: #555;">Every stitch is checked for perfection. Custom tailoring requires <strong>7-10 business days</strong> for completion.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div style="margin-bottom: 40px; position: relative;">
+                    <div style="position: absolute; left: -44px; top: 0; background: #fff; border: 2px solid #333; width: 16px; height: 16px; border-radius: 50%;"></div>
+                    <h3 style="margin: 0; color: #333; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 1px;">Step 2: On Its Way</h3>
+                    <p style="margin: 10px 0; color: #555;">
+                        <span style="display: block; margin-bottom: 5px;">📍 <strong>Standard:</strong> 3-5 Business Days</span>
+                        <span style="display: block;">🚀 <strong>Express:</strong> 1-2 Business Days</span>
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div style="margin-bottom: 40px; position: relative;">
+                    <div style="position: absolute; left: -44px; top: 0; background: #333; width: 16px; height: 16px; border-radius: 50%;"></div>
+                    <h3 style="margin: 0; color: #333; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 1px;">Step 3: Tracking & Delivery</h3>
+                    <p style="margin: 10px 0; color: #555;">Your tracking number will arrive in your inbox the moment the courier scans your parcel. Hand-delivered to your doorstep.</p>
+                </div>
+
+                <!-- Note -->
+                <div style="background: #fcf8f8; padding: 20px; border-radius: 12px; border-left: 4px solid #e0d5c1;">
+                    <p style="margin: 0; font-size: 0.9rem; color: #666; font-style: italic;">
+                        "Quality tailoring takes time. Thank you for choosing slow, sustainable fashion."
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section></br>
+
+<section class="client-experience">
+    <div class="container">
+        <h2>What Our Clients Say</h2>
+        <p class="subtitle">Real stories of transformation and bespoke craftsmanship.</p>
+
+        <!-- Testimonials Grid -->
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"The attention to detail on my custom gown was incredible. It fits perfectly and the fabric quality is top-notch!"</p>
+                <p class="client-name">— Sarah M.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"I brought in a vintage suit for restyling. It feels like a brand-new, modern piece now. Highly recommend!"</p>
+                <p class="client-name">— James L.</p>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Transparent pricing and great communication throughout the entire design process."</p>
+                <p class="client-name">— Elena R.</p>
+            </div>
+        </div>
+
+        <!-- Review Submission Form -->
+        <div class="review-form-container">
+            <h3>Share Your Experience</h3>
+            <form action="#" method="POST" class="review-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Provided</label>
+                    <select id="service" name="service">
+                        <option value="custom-design">Custom Design</option>
+                        <option value="alterations">Alterations</option>
+                        <option value="restyling">Restyling</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Review</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your garment..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Post Review</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+ <div class="follow-us-container">
+  <p>Follow Us</p>
+  <div class="social-links">
+    <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+    
+    <a href="#" class="social-icon ig"><i class="fab fa-instagram"></i></a>
+    
+    <a href="#" class="social-icon pin"><i class="fab fa-pinterest-p"></i></a>
+    
+    <a href="https://wa.me/YOURNUMBER" class="social-icon wa"><i class="fab fa-whatsapp"></i></a>
+    
+<a href="mailto:monarchsewing2025@gmail.com.com" class="social-icon mail" aria-label="Email Us">
+    <i class="fas fa-envelope"></i>
+</a>  </div>
+</div>
+
+
+
+
+
+    <footer style="text-align: center; padding-bottom: 40px; color: #666; font-size: 0.9rem;"> 
+        &copy; 2025 monarch Sewing |Designed by Monika Lewinsky.
+    </footer>
+
+<script src="script.js"></script>
+<script>
+    function sendToServices() {
+        var query = prompt("What service are you looking for? (e.g., Mending, Tailoring)");
+        if (query != null && query !== "") {
+            window.location.href = "services.html?find=" + encodeURIComponent(query);
+        }
+    }
+    </script>
+</body>
+</html>
+

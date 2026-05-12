@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mending Services | The Bespoke Stitch</title>
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --accent-sage: #d4d8c8; /* Soft green for "Repair & Care" */
+            --accent-gold: #d4af37;
+            --text-gray: #555;
+            --bg-cream: #faf9f6;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #fff;
+            color: var(--primary-dark);
+        }
+
+        /* Hero Header */
+        .mending-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* Story Section */
+        .intro-section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .intro-section h2 {
+            font-size: 2rem;
+            color: var(--accent-sage);
+            margin-bottom: 20px;
+        }
+
+        /* Mending Types Gallery */
+        .mending-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .mending-item {
+            background: var(--bg-cream);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .mending-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .mending-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #ccc; /* Placeholder if image missing */
+        }
+
+        .mending-info {
+            padding: 25px;
+        }
+
+        .mending-info h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        .mending-info p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-container {
+            text-align: center;
+            padding: 80px 20px;
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-sage);
+            color: var(--primary-dark);
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 216, 200, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(212, 216, 200, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 216, 200, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Header -->
+    <header class="mending-hero">
+        <div class="hero-text">
+            <h1>Mending Services</h1>
+            <p>Giving your favorite garments a second life.</p>
+        </div>
+    </header>
+
+    <!-- Detailed Content -->
+    <section class="intro-section">
+        <h2>Your favorite clothes deserve a second chance</h2>
+        <p>Whether it is a family heirloom, a high-end designer piece, or that perfectly worn-in pair of jeans, we specialize in repairing the damage while honoring the history of the garment. From "invisible" fixes to decorative art, we mend with precision.</p>
+    </section>
+
+    <!-- Types of Mending Work -->
+    <div class="mending-gallery">
+        
+        <!-- Type 1 -->
+        <div class="mending-item">
+            <img src="mending1.jpg" alt="Invisible Mending" class="mending-img">
+            <div class="mending-info">
+                <h3>Invisible Mending</h3>
+                <p>The elite choice for suits and fine woolens. We meticulously re-weave threads back into the original fabric to make holes and tears virtually disappear.</p>
+            </div>
+        </div>
+
+        <!-- Type 2 -->
+        <div class="mending-item">
+            <img src="decorative.jpg" alt="Decorative Darning" class="mending-img">
+            <div class="mending-info">
+                <h3>Decorative Darning</h3>
+                <p>Based on the Japanese Sashiko method. We turn a tear into a work of art using beautiful contrasting threads, making your garment unique and stronger than before.</p>
+            </div>
+        </div>
+
+        <!-- Type 3 -->
+        <div class="mending-item">
+            <img src="structural.jpg" alt="Hardware Repair" class="mending-img">
+            <div class="mending-info">
+                <h3>Structural Repair</h3>
+                <p>Replacing broken zippers, reinforcing thinning elbow patches, or fixing split seams in leather and heavy denim. Built for durability and daily wear.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Booking CTA -->
+    <section class="cta-container">
+        <h2>Don't let it sit in the closet.</h2>
+        <p style="margin-bottom: 30px; opacity: 0.8;">Send us a photo of the damage and we will give you a quote.</p>
+        <a href="consultation.html?service=mending" class="cta-button">Upload Photo for a Fix</a>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #999;">
+        &copy; 2026 The Bespoke Stitch | Fix. Save. Wear.
+    </footer>
+
+</body>
+</html>

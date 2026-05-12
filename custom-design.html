@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Custom Design Styles | The Bespoke Stitch</title>
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --accent-blush: #f5e1e1;
+            --bg-cream: #faf9f6;
+            --text-gray: #555;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #fff;
+            color: var(--primary-dark);
+        }
+
+        /* Hero Header */
+        .header-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: var(--bg-cream);
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-section h1 {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .header-section p {
+            color: var(--text-gray);
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* Design Categories Grid */
+        .design-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .design-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .design-item:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Image Styling */
+        .design-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Text Overlay */
+        .design-info {
+            padding: 25px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .design-info h3 {
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8b5e3c; /* Elegant Brown */
+        }
+
+        .design-info p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        /* The Link to Upload/Consultation */
+        .btn-select {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary-dark);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-select:hover {
+            background: #444;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #bbb;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-section">
+        <h1>Custom Design Options</h1>
+        <p>Choose a style category to begin your bespoke journey.</p>
+    </header>
+
+    <main class="design-container">
+        
+        <!-- Option 1: Bridal -->
+        <div class="design-item">
+            <img src="bride.jpg" alt="Bridal Design" class="design-image">
+            <div class="design-info">
+                <h3>Bridal & Couture</h3>
+                <p>One-of-a-kind wedding gowns and heirloom pieces crafted for your most special day.</p>
+                <a href="consultation.html?service=custom&type=bridal" class="btn-select">I Want This</a>
+            </div>
+        </div>
+
+        <!-- Option 2: Formal -->
+        <div class="design-item">
+            <img src="evnggown.jpg" alt="Formal Design" class="design-image">
+            <div class="design-info">
+                <h3>Evening & Party Wear</h3>
+                <p>Elegant silhouettes and luxurious fabrics for galas, proms, and celebrations.</p>
+                <a href="consultation.html?service=custom&type=formal" class="btn-select">I Want This</a>
+            </div>
+        </div>
+
+        <!-- Option 3: Ethnic/Cultural -->
+        <div class="design-item">
+            <img src="traditional11.jpg" alt="Ethnic Design" class="design-image">
+            <div class="design-info">
+                <h3>Traditional & Ethnic</h3>
+                <p>Modernized traditional wear that honors heritage through intricate craftsmanship.</p>
+                <a href="consultation.html?service=custom&type=ethnic" class="btn-select">I Want This</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; 2026 The Bespoke Stitch. All designs are handcrafted.
+    </footer>
+
+</body>
+</html>

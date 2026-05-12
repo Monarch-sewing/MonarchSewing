@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restyle & Repurpose | The Bespoke Stitch</title>
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent-blush: #f5e1e1;
+            --text-gray: #666;
+            --gold: #d4af37;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #fff;
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        /* Hero Header */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: #faf9f6;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-style: italic;
+            color: var(--text-gray);
+        }
+
+        /* Transformation Gallery */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .transformation-case {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 100px;
+            align-items: center;
+        }
+
+        /* Before & After Image Container */
+        .image-comparison {
+            display: flex;
+            gap: 15px;
+            position: relative;
+        }
+
+        .img-box {
+            flex: 1;
+            position: relative;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Designer's Content */
+        .content h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 25px;
+        }
+
+        .design-notes {
+            background: var(--accent-blush);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid var(--gold);
+        }
+
+        .design-notes h4 {
+            margin-top: 0;
+            text-transform: uppercase;
+            color: #8b5e3c;
+        }
+
+        /* Pulsing CTA */
+        .cta-box {
+            text-align: center;
+            padding: 60px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-blush);
+            color: var(--primary);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 225, 225, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(245, 225, 225, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 225, 225, 0); }
+        }
+
+        @media (max-width: 768px) {
+            .transformation-case { grid-template-columns: 1fr; }
+            .image-comparison { height: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Restyle & Repurpose</h1>
+        <p>Sustainable luxury: Transforming the forgotten into the favorite.</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Transformation Case #1 -->
+        <section class="transformation-case">
+            <div class="image-comparison">
+                <div class="img-box">
+                    <img src="old-suit-before.jpg" alt="Old oversized suit">
+                    <span class="label">Before</span>
+                </div>
+                <div class="img-box">
+                    <img src="modern-blazer-after.jpg" alt="Restyled modern blazer">
+                    <span class="label" style="background: var(--gold);">After</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <h2>The Vintage Suit Overhaul</h2>
+                <p>Taking an oversized 90s blazer and reshaping it into a sharp, tapered modern silhouette.</p>
+                
+                <div class="design-notes">
+                    <h4>Designer's Notes:</h4>
+                    <ul>
+                        <li>Deconstructed the shoulders for a natural fit.</li>
+                        <li>Slimmed the lapels to match modern trends.</li>
+                        <li>Repurposed excess fabric into a matching pocket square.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transformation Case #2 -->
+        <section class="transformation-case" style="direction: rtl;">
+            <div class="image-comparison" style="direction: ltr;">
+                <div class="img-box">
+                    <img src="old-sari-before.jpg" alt="Vintage Sari">
+                    <span class="label">Before</span>
+                </div>
+                <div class="img-box">
+                    <img src="evening-gown-after.jpg" alt="Sari turned into gown">
+                    <span class="label" style="background: var(--gold);">After</span>
+                </div>
+            </div>
+
+            <div class="content" style="direction: ltr;">
+                <h2>Heirloom Transformation</h2>
+                <p>Turning a traditional vintage Sari into a contemporary floor-length evening gown.</p>
+                
+                <div class="design-notes">
+                    <h4>Designer's Notes:</h4>
+                    <ul>
+                        <li>Preserved the hand-embroidered border for the waistline.</li>
+                        <li>Added a structured corset bodice for support.</li>
+                        <li>Created a "sustainable luxury" piece that tells a family story.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <div class="cta-box">
+            <h2>Have something old in your wardrobe?</h2>
+            <p>Don't throw it away. Let's make it your new favorite piece.</p>
+            <a href="consultation.html?service=restyle" class="cta-button">Start Your Transformation</a>
+        </div>
+
+    </main>
+
+</body>
+</html>
