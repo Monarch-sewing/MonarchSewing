@@ -205,22 +205,24 @@ border-radius: 2px;
 /* ===== MOBILE FIX ===== */
 @media screen and (max-width: 768px) {
 
+    /* HEADER */
     header{
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 10px;
-      margin-bottom: -10px;
+        margin-bottom: -10px;
     }
 
     /* LOGO */
     .logo img{
         width: 75px;
         height: auto;
+        margin-top: -40px;
         margin-bottom: 10px;
     }
 
-    /* NAV */
+    /* NAVIGATION */
     nav{
         width: 100%;
     }
@@ -245,7 +247,7 @@ border-radius: 2px;
         white-space: nowrap;
     }
 
-    /* BUTTON COMES BELOW */
+    /* BUTTON */
     .cta-btn{
         display: inline-block;
         margin-top: 10px;
@@ -289,11 +291,21 @@ border-radius: 2px;
         padding: 20px;
     }
 
-    /* CTA */
+    .value-card{
+        padding: 20px;
+    }
+
+    /* CTA BUTTON */
     .cta-button{
         width: 90%;
         padding: 14px;
         font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer{
+        padding: 20px;
+        text-align: center;
     }
 }
       
