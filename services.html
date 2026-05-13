@@ -206,15 +206,34 @@
     margin-bottom: 50px;
 }
 
-
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
 
 .gallery-item {
     text-align: center;
 }
 
 
-
 /* Hover Effect */
+.gallery-img-container {
+    position: relative;
+    overflow: hidden;
+    height: 350px; /* Uniform height for all gallery images */
+    background-color: #fcf6f6; /* Blush placeholder */
+    border: 1px solid #f2f2f2;
+    margin-bottom: 15px;
+}
+		
+.gallery-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the box without stretching */
+    transition: transform 0.5s ease;
+}
+./* Hover Effect */
 .gallery-img-container:hover img {
     transform: scale(1.05);
 }
@@ -245,20 +264,6 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
-.gallery-item h3 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #444;
-}
-
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 10px;
-}
-
 
      
 /* Responsive */
