@@ -386,6 +386,36 @@
 .gallery-img-container:hover img {
     transform: scale(1.08);
 }
+		* Mobile Media Query */
+@media screen and (max-width: 768px) {
+    
+    /* Target the parent container */
+    .gallery-container {
+        display: flex;
+        flex-direction: column; /* This stacks items vertically */
+        align-items: center;    /* Centers them on the screen */
+        gap: 30px;              /* Adds space between the stacked items */
+        padding: 20px;
+    }
+
+    /* Target the individual items */
+    .gallery-item {
+        width: 100% !important; /* Forces the item to fill the phone width */
+        max-width: 400px;       /* Prevents images from getting too huge on large phones */
+    }
+
+    /* Adjust the image container for mobile height */
+    .gallery-img-container {
+        height: auto; 
+        aspect-ratio: 1 / 1;    /* Keeps the images square on mobile */
+    }
+
+    .gallery-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
     </style>
 </head>
 <body>
