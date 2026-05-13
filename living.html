@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home & Living | Monarch Sewing</title>
+    <!-- Ensure this points to your CSS -->
+
+
+    <style>
+
+
+
+/* Hero Section */
+.collection-hero {
+    background-color: #fff5f3; /* Very soft blush/off-white */
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 1px solid #f2dcd8;
+    margin-bottom: 50px;
+}
+
+.collection-hero h1 {
+    font-family: 'Playfair Display', serif; /* Use a serif font for a "tailor" feel */
+    font-size: 2.5rem;
+    color: #4a4a4a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: #e6b8af; /* Your blush theme color */
+    margin: 20px auto;
+}
+
+/* The Grid Container */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Making the Cards "Pop" */
+.collection-card {
+    background: white;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.collection-card:hover {
+    transform: translateY(-10px); /* Lifts the card up */
+    box-shadow: 0 15px 30px rgba(230, 184, 175, 0.3); /* Soft blush shadow */
+}
+
+/* Image styling */
+.card-image {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+.collection-card:hover .card-image {
+    transform: scale(1.1); /* Zooms the fabric image slightly */
+}
+
+/* Text inside the card */
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    color: #777;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Container for the whole grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Individual Card Styling */
+.product-card {
+flex: 1 1 calc(50% - 20px);
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Slightly rounded corners for a soft look */
+}
+
+/* Image styling */
+.image-container img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover; /* Ensures the image fills the space without stretching */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Overlay Text Styling */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9); /* Blush/White feel */
+    padding: 20px;
+    transform: translateY(100%); /* Hides text initially */
+    transition: transform 0.4s ease;
+}
+
+/* Hover Effect: Slide text up and zoom image slightly */
+.product-card:hover .overlay {
+    transform: translateY(0);
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+
+
+</style>
+</head>
+<body>
+
+ <section class="category-section">
+<header class="collection-hero">
+    <div class="hero-content">
+        <h1>Custom Sew - Living Room </h1>
+        <div class="divider"></div>
+    <p class="collection-description">
+        Our Living Room range is all about the little luxuries—the softness of 
+        a perfectly stuffed pillow cover, the crisp lines of a tailored table 
+        runner, and the cozy weight of handmade curtains. We specialize in creating high-quality, functional beauty for your living space. Explore our latest work and find the perfect finishing touch for your home.
+    </p>
+</header>
+    <div class="product-grid">
+
+        <!-- Item 1: Doormat -->
+        <div class="product-card">
+            <div class="image-container">
+                <img src="doormat.jpg" alt="Custom hand-stitched doormat">
+                <div class="overlay">
+                    <span class="category-tag">New</span>
+                    <h3>Hand-Stitched Doormats</h3>
+                    <p>Durable and personalized for your entryway.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 2: Sofa Cover -->
+        <div class="product-card">
+            <div class="image-container">
+                <img src="sofacover.jpg" alt="Bespoke sofa cover">
+                <div class="overlay">
+                    <h3>Tailored Sofa Covers</h3>
+                    <p>Perfect fit for any furniture style.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 3: Curtains -->
+        <div class="product-card">
+            <div class="image-container">
+                <img src="curtain1.jpg" alt="Custom curtains">
+                <div class="overlay">
+                    <h3>Custom Curtains</h3>
+                    <p>Choose your fabric, length, and style.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 4: Table Runner -->
+        <div class="product-card">
+            <div class="image-container">
+                <img src="tablerunner.jpg" alt="Quilted table runner">
+                <div class="overlay">
+                    <h3>Table Runners</h3>
+                    <p>Decorative accents for your dining room.</p>
+                </div>
+            </div>
+        </div>	
+
+    </div>
+</section>
+</body>
+</html>
