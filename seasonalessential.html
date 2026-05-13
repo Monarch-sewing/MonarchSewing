@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Essentials | Monarch Sewing</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your main CSS -->
+
+
+ <style>/* Container for the seasonal items */
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Individual Season Cards */
+.season-card {
+    background-color: #ffffff;
+    border: 1px solid #f2e0e0; /* Subtle blush border */
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.season-card:hover {
+    transform: translateY(-5px);
+}
+
+.season-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.season-card h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Call to Action Section */
+.cta-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #fffafb; /* Very light blush background */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #d8b2b2; /* Signature blush color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.seasonal-intro {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #ffffff; /* Keeps it clean and white */
+}
+
+.seasonal-description {
+    max-width: 900px; /* Limits the width so it doesn't stretch too long across the screen */
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8; /* Adds breathing room between the lines */
+    color: #555;
+    font-family: 'Playfair Display', serif; /* Use a serif font for that "boutique" feel */
+}
+
+/* Mobile Fix */
+@media screen and (max-width: 768px) {
+    .seasonal-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 15px;
+        text-align: left; /* Often easier to read on phones */
+    }
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>Seasonal Essentials</h1>
+    </header></br></br>
+ <section class="seasonal-intro">
+    <div class="content-wrapper">
+        <h2>Custom Seasonal Sewing</h2>
+        <p class="seasonal-description">
+            At Monarch Sewing, we believe your wardrobe should adapt beautifully to the changing seasons with garments tailored specifically for you. 
+            From breathable, lightweight linen pieces for the summer heat to cozy, custom-stitched layers designed to keep you warm through the winter months, 
+            we craft each piece with precision and care. Whether you need a seasonal refresh or a one-of-a-kind statement dress, our bespoke sewing service 
+            ensures that every garment fits your style and the weather perfectly.
+        </p>
+    </div>
+</section>
+    <main class="container">
+        <section class="season-grid">
+            <!-- Summer Section -->
+            <div class="season-card">
+                <img src="summer.jpg" alt="Summer Sundresses">
+                <h2>Summer Collection</h2>
+                <p>Stay cool with our breathable cotton sundresses, airy linen blouses, and lightweight signature rayon skirts.</p>
+            </div>
+
+            <!-- Autumn Section -->
+            <div class="season-card">
+                <img src="overcoat.jpg" alt="Autumn Layering">
+                <h2>Autumn Layers</h2>
+                <p>Transition in style with bespoke light jackets, corduroy trousers, and custom-fit long-sleeve shirts.</p>
+            </div>
+
+            <!-- Winter Section -->
+            <div class="season-card">
+                <img src="winterwarm.jpg" alt="Winter Capes">
+                <h2>Winter Warmth</h2>
+                <p>Experience elegance in our signature wool winter capes, heavy-duty overcoats, and lined flannel garments.</p>
+            </div>
+
+            <!-- Spring Section -->
+            <div class="season-card">
+                <img src="willjacket.jpg" alt="Spring Styles">
+                <h2>Spring Refresh</h2>
+                <p>Embrace the bloom with floral patterns, tailored vests, and versatile cotton-twill jackets.</p>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <p>Ready for your next seasonal piece?</p>
+            <a href="consultation.html" class="button">Contact Us for a Consultation</a>
+        </div>
+    </main>
+
+</body>
+</html>
