@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Blouse Gallery | Monarch Sewing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
 <style>
 /* Header for the specific category page */
@@ -65,7 +67,34 @@
 .gallery-item:hover .img-overlay {
     opacity: 1;
 }
-</style></head>
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    /* Adjust the header padding for smaller screens */
+    .detail-header {
+        padding: 40px 15px;
+    }
+
+    /* Force the grid into a single vertical column */
+    .full-gallery-grid {
+        grid-template-columns: 1fr; /* 1fr means one full-width column */
+        padding: 15px;
+        gap: 20px; /* Adds space between the stacked images */
+    }
+
+    /* Adjust the height of the images so they don't look too stretched */
+    .gallery-item {
+        height: 400px; /* Makes the vertical images stand out */
+    }
+
+    /* Make the overlay visible by default on mobile since there is no 'hover' */
+    .img-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.5); /* Slightly darker for better readability */
+    }
+}
+    
+</style>
+</head>
 <body>
 
     <section class="detail-header">
