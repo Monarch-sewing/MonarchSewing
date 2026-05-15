@@ -264,6 +264,9 @@ position: relative; z-index: 10;
   line-height: 1.6;
   opacity: 0.9;
 }        
+
+
+		
 /* ===== MOBILE FIX ===== */
 @media screen and (max-width: 768px) {
 
@@ -362,12 +365,42 @@ position: relative; z-index: 10;
         width: 90%;
         padding: 14px;
         font-size: 14px;
-    }
+    } 
 
     /* FOOTER */
     footer{
         padding: 20px;
         text-align: center;
+    }
+
+	#shipping-policy {
+            padding: 40px 15px !important; /* Reduces large desktop padding */
+        }
+        #shipping-policy .flex-container {
+            gap: 30px !important; /* Closes the massive gap between columns */
+        }
+        #shipping-policy .img-wrapper {
+            position: relative;
+            margin-bottom: 40px; /* Gives breathing room for the overlapping box */
+        }
+        #shipping-policy .hero-image {
+            height: 320px !important; /* Prevents the image from stretching too tall on mobile */
+            border-radius: 20px 0 20px 0 !important; /* softens the aggressive corners */
+        }
+        #shipping-policy .overlap-box {
+            position: relative !important; /* Removes absolute positioning so it doesn't break layout */
+            bottom: auto !important;
+            right: auto !important;
+            margin: -30px auto 0 auto !important; /* Offsets it to still look stacked beautifully */
+            max-width: 90% !important;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        #shipping-policy .timeline-container {
+            padding-left: 25px !important; /* Pulls timeline closer to the left edge */
+        }
+        #shipping-policy .timeline-dot {
+            left: -34px !important; /* Re-aligns the dots perfectly with the closer line */
+        }
     }
 }
     </style>
@@ -625,8 +658,8 @@ position: relative; z-index: 10;
 
 
     <footer style="text-align: center; padding-bottom: 40px; color: #666; font-size: 0.9rem;"> 
-		        <p><a href="about.html">About Us</a></p></br>
-        &copy; 2025 monarch Sewing | Designed by Monika Lewinsky. | special thanks to Draksha.
+		        <p><a href="about.html">About Us</a></p>
+        &copy; 2025 monarch Sewing | All Rights Reserved.
     </footer>
 
 <script src="script.js"></script>
